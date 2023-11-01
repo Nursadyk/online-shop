@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        *{
+            box-sizing: border-box;
+            text-transform: capitalize;
+        }
+        body{
+           font-family: arial;
+           font-size:17px;
+           padding: 8px;
+        }
+     .heading{
+            text-align: center;
+            color: #130f40;
+            text-transform: uppercase;
+            padding-bottom: 1rem;
+            font-size: 2rem;
+        }
+        .row{
+            display: flex;
+            flex-wrap: wrap;
+            margin: 0 -16px;
+        }
+        .col-25{
+        flex: 25%;
+        }
+        .col-50{
+            flex: 50%;
+        }
+        .col-75{
+            flex: 75%;
+        }
+        .col-25,.col-50,.col-75{
+            padding: 0 16px;
+        }
+        .container{
+            background: #f2f2f2;
+            padding: 5px 20px 15px 20px;
+            border: 1px solid lightgray;
+            border-radius: 3px;
+        }
+        input[type=text]{
+            width: 100%;
+            margin-bottom: 20px;
+            padding: 12px;
+            border: 1px solid#ccc;
+            border-radius: 3px;
+        }
+        label{
+         margin-bottom: 10px;
+         display: block;
+        }
+        .icon-container{
+            margin-bottom: 20px;
+            padding: 7px 0;
+            font-size: 24px;
+        }
+        .btn{
+            background: #04AA6D;
+            color: #fff;
+            padding: 12px;
+            margin: 10px 0;
+            border: none;
+            width: 100%;
+            border-radius: 3px;
+            cursor: pointer;
+            font-size: 17px;
+        }
+        .btn:hover{
+            background: #45a049;
+        }
+        a{
+            color: #2196F3;
+        }
+        hr{
+            border: 1px solid lightgray;
+        }
+        .span.price{
+            float: right;
+            color: gray;
+        }
+        /*media */
+        @media(max-width:800px){
+        .row{
+            flex-direction: column-reverse;
+        }
+        .col-25{
+            margin-bottom: 20px;
+        }
+    }
+    </style>
+</head>
+<body>
+<h2 class="heading">заказ берүүү формасы</h2>
+<div class="row">
+        <div class="col-75">
+            <div class="container">
+                <form action="/action_page.php">
+     <div class="row">
+    <div class="col-50">
+        <h3>эсеп кысап дареги</h3>
+        <label for="fname"><i class="fa fa-user">толук аты жөнүңүз</i></label>
+        <input type="text" name="firstname" id="fname" placeholder="толук аты жөнүңүз">
+
+        <label for="email"><i class="fa fa-envelope">email</i></label>
+        <input type="text" name="firstname" id="email" placeholder="elmirbek@gmail.com">
+
+        <label for="adr"><i class="fa fa-address-card-o">адресс</i></label>
+        <input type="text" name="firstname" id="adr" placeholder="Жороева фатима 32-үй">
+
+        <label for="city"><i class="fa fa-institution">шаар</i></label>
+        <input type="text" name="state" id="city" placeholder="Бишкек">
+
+     <div class="row">
+        <div class="col-50">
+            <label for="state">мамлекет</label>
+            <input type="text" id="state" placeholder="кыргызстан">
+        </div>
+        <div class="col-50">
+            <label for="zip">zip</label>
+            <input type="text" id="zip" placeholder="10001">
+        </div>
+    </div>
+</div>
+<div class="col-50">
+    <h3>төлөм</h3>
+    <label for="fname">Кабыл алынган карталар</label>
+    <div class="icon-container">
+        <i class="fa fa-cc-amex" style="color: navy;"></i>
+        <i class="fa fa-cc-amex" style="color:blue;"></i>
+        <i class="fa fa-cc-mastercard" style="color: red;"></i>
+        <i class="fa fa-cc-discover" style="color: orange;"></i>
+    </div>
+    <label for="cname">Картадагы аты</label>
+    <input type="text" name="" id="cname" placeholder="Рашидов Нурбек">
+
+    <label for="ccnum">Картанын номери</label>
+    <input type="text" name="" id="ccnum" placeholder="1111-2222-3333-4444">
+
+    <label for="expmonth">Экспресс ай</label>
+    <input type="text" name="" id="expmonth" placeholder="Октябрь">
+    <div class="row">
+        <div class="col-50">
+            <label for="expyear"> Эспирация датасы</label>
+            <input type="text" id="expyear" placeholder="2023">
+          </div>
+        <div class="col-50">
+          <label for="cvv"> CVV</label>
+          <input type="text" id="cvv" placeholder="435">
+        </div>
+    </div>
+</div>
+<label>
+    <input type="checkbox" checked="checked">
+    жеткирүү дареги эсеп кысап менен бирдей
+</label>
+<input type="submit" value="текшерүүнү улантуу" class="btn">
+</form>
+</div>
+</div>
+</body>
+</html>

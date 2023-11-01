@@ -1,0 +1,726 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our menu</title>
+     <!--google fonts-->
+<link rel="stylesheet" href="@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&family=Raleway:wght@300&family=Roboto:wght@100;300;400;500&display=swap');">
+<!--font links-->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+<link rel="stylesheet" href="Css/style.css">
+<!--css file link-->
+    <style>
+        :root{
+    --red:#eb4d4b;
+    --black:#130f40;
+    --light:#666;
+    --border:.1rem solid rgba(0,0,0,.3);
+    --box-shadow: 0.5rem 0.5rem rgba(0,0,0,.1);
+  }
+        *{
+font-family: 'Roboto', sans-serif;
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+outline: none;
+border: none;
+text-decoration: none;
+text-transform: capitalize;
+transform: .2s linear;
+}
+html{
+font-size: 62.5%;
+overflow-x: hidden;
+scroll-padding-top: 9rem;
+scroll-behavior: smooth;
+}
+html::-webkit-scrollbar{
+width: .8rem;
+
+}
+html::-webkit-scrollbar-thumb{
+background: var(--red);
+border-radius: 5rem;
+}
+section{
+    margin-top: 5rem;
+    padding: 5rem;
+}
+.btn{
+margin-top: 1rem;
+display:inline-block;
+padding: .9rem 3rem;
+font-size: 1.7rem;
+color: #fff;
+background: var(--red);
+cursor: pointer;
+border-radius: 2rem;
+}
+.btn:hover{
+letter-spacing: .2rem;
+}
+.heading{
+text-align: center;
+color: var(--black);
+text-transform: uppercase;
+padding-bottom: 3.5rem;
+font-size: 4rem;
+}
+.heading span{
+text-align: center;
+color: var(--red);
+}
+.dark-mode{ 
+background: #000; 
+color: #fff; 
+} 
+        .header{
+        background:#fff;
+        display: flex;
+        justify-content:space-between;
+        align-items: center;
+        padding: 1.5rem 7%;
+        border-bottom: var(--border);
+        position: fixed;
+        top: 0;left: 0;right: 0;
+        z-index: 1000;
+        box-shadow: var(--box-shadow);
+        }
+        .header a{
+          font-size: 3rem;
+          color: var(--red);
+        }
+        .header .fa-shopping-cart{
+        font-size: 3rem;
+        color: var(--red);
+        }
+        .header .navbar a{
+        margin: 0 1.5rem;
+        font-size: 1.6rem;
+        color: var(--light);
+        }
+        .header .navbar a:hover{
+        color: var(--red);
+        border-bottom: .1rem solid var(--red);
+        padding-bottom: .5rem;
+        }
+        .header .icons div{
+        color: var(--light);
+        cursor: pointer;
+        font-size: 2.5rem;
+        margin-left: 2rem;
+        }
+        .header .icons div:hover{
+        color: var(--red);
+        }
+        #menu-btn{
+        display: none;
+        }
+        .header .search-from{
+        position:absolute;
+        top: 115%; right: 7%;
+        background: #fff;
+        width: 50rem;
+        height: 5rem;
+        display: flex;
+        align-items: center;
+        transform: scaleY(0);
+        transform-origin: top;
+        }
+        .header .search-from.active{
+        transform: scaleY(1);
+        }
+        .header .search-from input{
+        height: 100%;
+        width: 100%;
+        font-size: 1.6rem;
+        color: var(--black);
+        padding: 1rem;
+        text-transform: none;
+        }
+        .header .search-from label{
+        cursor: pointer;
+        font-size: 2.2rem;
+        margin-right: 1.5rem;
+        color: var(--black);
+        }
+        .header .search-from label:hover{
+        color: var(--main-color);
+        }
+        
+
+
+
+
+
+
+
+
+
+      /*media vewport*/
+@media(max-width:991px){
+html{
+font-size: 50%;
+}
+.header{
+padding: 1.5rem 2rem;
+}
+section{
+padding: 2rem;
+}
+}
+@media(max-width:768px){
+#menu-btn{
+display:inline-block;
+}
+.header .navbar{
+position: absolute;
+top: 100%; right: -100%;
+background: #fff;
+width: 30rem;
+height: calc(100vh - 9.5rem);
+}
+.header .navbar.active{
+right: 0;
+}
+.header .navbar a{
+display:block;
+color: var(--black);
+margin: 1.5rem;
+padding: .5rem;
+font-size: 2rem;
+}
+.header .search-from{
+width: 90%;
+right: 2rem;
+}
+.home{
+background-position: left;
+justify-content: center;
+text-align: center;
+}
+.home .content h3{
+font-size: 4.5rem;
+}
+.home .content p{
+font-size: 1.5rem;
+}
+}
+@media(max-width:450px){
+html{
+font-size: 50%;
+}
+.home .content h3{
+font-size: 1.5rem;
+text-align: left;
+}
+.footer .box-container .box{
+  text-align: center;
+}
+}
+/*media vewport end*/
+
+
+
+.menu .box-container{
+display:grid;
+grid-template-columns: repeat(auto-fit, minmax(40rem, 1fr));
+gap: 1.5rem;
+}
+.menu .box-container .box{
+    text-align: center;
+    border: var(--border);
+    height: 40rem;
+    margin-bottom: 8rem;
+}
+.menu .box-container img{
+height:100%;
+width: 100%;
+object-fit: cover;
+}
+.menu .box-container .box .price{
+  max-width: 20rem;
+  margin: 0 auto;
+  color: var(--red);
+  font-size: 2.5rem;
+}
+.products .box-container{
+display:grid;
+grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+gap: 1.5rem;
+}
+.products .box-container .box{
+text-align: center;
+border: var(--border);
+padding:2rem;
+background: #f9f9f9;
+}
+.products .box-container .box .icons span{
+height: 5rem;
+width: 5rem;
+line-height: 5rem;
+font-size: 2rem;
+border: var(--border);
+color: var(--red);
+margin:.2rem 1.5rem 0;
+cursor: pointer;
+}
+.products .box-container .box .icons a:hover{
+background: var(--light);
+}
+.products .box-container .box .image{
+padding: 2.5rem 0;
+}
+.products .box-container .box .image{
+padding: 2.5rem 0;
+}
+.products .box-container .box .image img{
+height: 25rem;
+}
+.products .box-container .box .content h3{
+color: var(--black);
+font-size: 2.5rem;
+}
+.products .box-container .box .content .stars{
+padding: 1.5rem;
+}
+.products .box-container .box .content .stars i{
+font-size: 1.7rem;
+color: var(--red);
+}
+.products .box-container .box .content .price{
+  color: var(--red);
+  font-size: 2.5rem;
+}
+.products .box-container .box .content .price span{
+  font-size: 1.5rem;
+  text-decoration: line-through;
+  font-weight: lighter;
+
+}
+.footer{
+        background:#f9f9f9;
+      }
+      .footer .box-container{
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+        gap: 1.5rem;
+      }
+      .footer .box-container .box h3{
+        font-size: 2.2rem;
+        color: var(--black);
+        padding: 1rem 0;
+      }
+      .footer .box-container .box p{
+        font-size: 1.4rem;
+        color: var(--light);
+        padding: 1rem 0;
+      }
+      .footer .box-container .box a{
+        display: block;
+        font-size: 1.4rem;
+        color: var(--light);
+        padding: 1rem 0;
+      }
+      .footer .box-container .box a:hover{
+        color: var(--red);
+      }
+      .footer .box-container .box a i{
+        padding-right: .5rem;
+        color: var(--red);
+
+      }
+      .footer .box-container .box a i:hover{
+        padding-right: 2rem;
+      }
+      .footer .share{
+        padding-top: 2rem;
+        text-align: center;
+      }
+      .footer .share a{
+        height: 5rem;
+        width: 5rem;
+        line-height: 5rem;
+        border-radius: 50%;
+        background: var(--black);
+        color: #fff;
+        margin: .3rem;
+      }
+      .footer .share a:hover{
+        background: var(--red);
+        transform: rotate(360deg);
+      }
+      .footer .credit{
+        margin-top: 2.5rem;
+        padding: 1rem;
+        border-top:var(--border);
+        text-align: center;
+        color: var(--light);
+      }
+    </style>
+</head>
+<body>
+    <!--header start-->
+<header class="header">
+    <a href="main.html" class="fas fa-arrow-left">
+    </a>
+    <nav class="navbar">
+      <a href="#suits">костюмдар</a>
+      <a href="#trouthes">шымдар</a>
+      <a href="#ties">галстуктар</a>
+      <a href="#shoose">бут кийимдер</a>
+    </nav>
+    <div class="icons">
+     <div class="fas fa-toggle-on" onclick="darkMode()"></div>
+      <div class="fas fa-search" id="search-btn"></div>
+      <div class="fas fa-bars" id="menu-btn"></div>
+    </div>
+    <div class="search-from">
+        <input type="search" id="search-box" placeholder="search here...">
+        <label for="search-box" class="fas fa-search"></label>
+      </div>
+  </header>
+  <!--header end-->
+  <!--section start-->
+  <section class="menu" id="suits">
+    <h1 class="heading">биздин <span>товарлар</span></h1>
+    <div class="box-container">
+      <div class="box">
+        <img src="https://storage-cdn8.gloria-jeans.ru/medias/GWT002276-2-02-300Wx300H.jpg?context=bWFzdGVyfHByb2R1Y3R8MzIyNDR8aW1hZ2UvanBlZ3xoYjEvaDFiLzk4MjQzOTM0MjkwMjIvR1dUMDAyMjc2LTItMDJfMzAwV3gzMDBILmpwZ3wwN2FjMjJhMzVmOGNkM2QwZjJhZTdiNjY3ZDkyZjVkZjBjNTU0ZDI4NjA5YWI1YjgxOTQwZThlNGIxMzY3NzJj" alt="">
+        <div class="content">
+          <div class="price"> 600сом<a href="payment.html" class="btn">сатып алуу</a></div>
+        </div>
+      </div>
+      <div class="box">
+        <img src="https://storage-cdn8.gloria-jeans.ru/medias/GWT002929-1-02-300Wx300H.jpg?context=bWFzdGVyfHByb2R1Y3R8MTY3NTl8aW1hZ2UvanBlZ3xoMTYvaDY3Lzk5MDgwMzkzMTk1ODIvR1dUMDAyOTI5LTEtMDJfMzAwV3gzMDBILmpwZ3xlYjgxOWMzZGFjMmQwMTNkNTM2Yjc5YjI3MmMwNDAzNDcyZjg1NjQwYmExM2U2ZWNmMWFiYjA2ZmU0MzE5NWY4" alt="">
+        <div class="content">
+          <div class="price"> 600сом<a href="payment.html" class="btn">сатып алуу</a></div>
+        </div>
+      </div>
+      <div class="box">
+        <img src="https://storage-cdn8.gloria-jeans.ru/medias/GWT002929-2-03-300Wx300H.jpg?context=bWFzdGVyfHByb2R1Y3R8MTM5MzN8aW1hZ2UvanBlZ3xoN2QvaGYxLzk4OTc3MjM1NTk5NjYvR1dUMDAyOTI5LTItMDNfMzAwV3gzMDBILmpwZ3wwOTk0NDAzODA0Y2MxMDNiZTBmMTU1ZDE2NmJlZjBhZDk5MzQwMzk5N2E5MmFhNzA4NjJhZTg5MmExNzNkOTQx" alt="">
+        <div class="content">
+          <div class="price"> 600сом<a href="payment.html" class="btn">сатып алуу</a></div>
+        </div>
+      </div>
+      <div class="box">
+        <img src="https://storage-cdn8.gloria-jeans.ru/medias/GWT002823-2-01-300Wx300H.jpg?context=bWFzdGVyfHByb2R1Y3R8MjAyNDh8aW1hZ2UvanBlZ3xoZTIvaGI1Lzk4OTM3NjAzNjg2NzAvR1dUMDAyODIzLTItMDFfMzAwV3gzMDBILmpwZ3xlYzUxNWU1ZDNjNmE4Y2Y3NjBiZWQxMDhkMDViY2M1ZDIxNGFiYTJhNTJhM2VkNmFlMzYwNWI5NjM2OGFkNTQ4" alt="">
+        <div class="content">
+          <div class="price"> 600сом<a href="payment.html" class="btn">сатып алуу</a></div>
+        </div>
+      </div>
+      <div class="box">
+        <img src="https://storage-cdn8.gloria-jeans.ru/medias/GWT002822-3-02-300Wx300H.jpg?context=bWFzdGVyfHByb2R1Y3R8NDMwNzF8aW1hZ2UvanBlZ3xoOGYvaDA0Lzk4MTg0MTA1MTY1MTAvR1dUMDAyODIyLTMtMDJfMzAwV3gzMDBILmpwZ3wzZDFjNmMxNDQzMTNmYjdmYWEyOTNkNTA2MGExZDIwY2FlMGY2OGM0MDk1MWY4NmNmYjcyZDYxNGNhZDY2YTUw" alt="">
+        <div class="content">
+          <div class="price"> 600сом<a href="payment.html" class="btn">сатып алуу</a></div>
+        </div>
+      </div>
+      <div class="box">
+        <img src="https://storage-cdn8.gloria-jeans.ru/medias/GWT002831-1-01-300Wx300H.jpg?context=bWFzdGVyfHByb2R1Y3R8ODUzMnxpbWFnZS9qcGVnfGg3MC9oZDgvOTgzMjg5NzAxOTkzNC9HV1QwMDI4MzEtMS0wMV8zMDBXeDMwMEguanBnfGMwNTgyZTBjNDIyNGZlYmJhNzI4NTc4NjNlNDc2YzI1OTIxN2JmYjBjOGMwOGYyNWJmMzZkMTMxY2Y5MTg1Yjg" alt="">
+        <div class="content">
+          <div class="price"> 600сом<a href="payment.html" class="btn">сатып алуу</a></div>
+        </div>
+      </div>
+      <div class="box">
+        <img src="https://storage-cdn8.gloria-jeans.ru/medias/GWT002833-2-02-300Wx300H.jpg?context=bWFzdGVyfHByb2R1Y3R8NDQ5NzF8aW1hZ2UvanBlZ3xoYWYvaDc1Lzk4ODExODY5MjY2MjIvR1dUMDAyODMzLTItMDJfMzAwV3gzMDBILmpwZ3xkODNjNWJhODM2MGM2NTY5OWFkNDZjNGE5MTQ2ZjIxNGIyYmJiNjA5ZDVmZDg3MzkwYWU1NzQ5Njk1OTM4N2Iy" alt="">
+        <div class="content">
+          <div class="price"> 600сом<a href="payment.html" class="btn">сатып алуу</a></div>
+        </div>
+      </div>
+      <div class="box">
+        <img src="https://storage-cdn8.gloria-jeans.ru/medias/GWT002662-1-03-300Wx300H.jpg?context=bWFzdGVyfHByb2R1Y3R8MzYzMjB8aW1hZ2UvanBlZ3xoYTAvaGY3Lzk4NjY0Njc1MDgyNTQvR1dUMDAyNjYyLTEtMDNfMzAwV3gzMDBILmpwZ3wzMjk5MjRmNGNiNmQ0ZmMzZTgwMDdmODI0NjQ4MmE5Y2M5ZThlZWE4MTY5OGZmYTRiMDk1ZjNiNmU1M2QyZTM4" alt="">
+        <div class="content">
+          <div class="price"> 600сом<a href="payment.html" class="btn">сатып алуу</a></div>
+        </div>
+      </div>
+      <div class="box">
+        
+        <img src="https://storage-cdn8.gloria-jeans.ru/medias/GWT002659-2-02-300Wx300H.jpg?context=bWFzdGVyfHByb2R1Y3R8NDA4NDJ8aW1hZ2UvanBlZ3xoZDkvaDgyLzk3NDc5MzY5Njg3MzQvR1dUMDAyNjU5LTItMDJfMzAwV3gzMDBILmpwZ3w1NmVjMTMwM2ZkOTVkYzA0ZWRiMTY3MDM2ZTY2NGE2MmQyNDdkOTZhNDdlMTU5YjQ5ODQ4NzdhOTMxZTYyNjIy" alt="">
+        <div class="content">
+          <div class="price"> 600сом<a href="payment.html" class="btn">сатып алуу</a></div>
+        </div>
+      </div>
+        
+    </div>
+  </section>
+  <!--suits section ends-->
+  <!--trouthes section start-->
+  <section class="products" id="trouthes">
+    <h1 class="heading">арзан<span>ДАТУУЛАР</span></h1>
+    <div class="box-container">
+      <div class="box">
+        <div class="image">
+          <img src="https://storage-cdn8.gloria-jeans.ru/medias/GKT020684-1-01-300Wx300H.jpg?context=bWFzdGVyfHByb2R1Y3R8Mjc0MzV8aW1hZ2UvanBlZ3xoMzQvaDg1Lzk4OTYxNTM1Nzk1NTAvR0tUMDIwNjg0LTEtMDFfMzAwV3gzMDBILmpwZ3wyNWI3YTMzY2RhNzJhZjA0YTY3MWExZDY0M2U3NTJhOTliZDRiNTQ5NWQzODk1ZjYyYzcxOGU1MmUzOWI1NTMy" alt="">
+        </div>
+        <div class="content">
+          <div class="price">600сом <span>1200сом</span> <a href="payment.html" class="btn">сатып алуу</a></div>
+        </div>
+      </div>
+      <div class="box">
+        <div class="image">
+          <img src="https://storage-cdn8.gloria-jeans.ru/medias/GKT020680-1-01-300Wx300H.jpg?context=bWFzdGVyfHByb2R1Y3R8Mjg4NTl8aW1hZ2UvanBlZ3xoOTQvaGIzLzk4OTU4NzQxMzQwNDYvR0tUMDIwNjgwLTEtMDFfMzAwV3gzMDBILmpwZ3w1YTM4YjY1YTcwMDlhY2YwOTE3ZWU2ZmVjODcyODBkNjYyNjJiZDk5ODMzNjE3MWU4YWU2MTcwNmEwNWU2ZTBk">
+        </div>
+        <div class="content">
+          <div class="price">880сом <span>2000сом</span>
+            <a href="payment.html" class="btn">сатып алуу</a>
+          </div>
+        </div>
+      </div>
+      <div class="box">
+        <div class="image">
+          <img src="https://storage-cdn8.gloria-jeans.ru/medias/GKT015298-1-02-300Wx300H.jpg?context=bWFzdGVyfHByb2R1Y3R8MTEyMTF8aW1hZ2UvanBlZ3xoYTQvaGUzLzk5MTE5OTU4NTg5NzQvR0tUMDE1Mjk4LTEtMDJfMzAwV3gzMDBILmpwZ3w3ODE5YTY2OTE4NDlmOTQ0MjZhZTAwMjZlOTUxN2Y5NzAwODJkOThjY2UyYmZmNTY1YTJhOWE2MmVjNTEzYjg3">
+        </div>
+        <div class="content">
+          <div class="price">760сом <span>2300сом</span>
+            <a href="payment.html" class="btn">сатып алуу</a>
+          </div>
+        </div>
+      </div>
+      <div class="box">
+        <div class="image">
+          <img src="https://storage-cdn8.gloria-jeans.ru/medias/GKT017300-1-01-300Wx300H.jpg?context=bWFzdGVyfHByb2R1Y3R8MjQwNDl8aW1hZ2UvanBlZ3xoMDIvaDkzLzk4MDgxNjA0NTY3MzQvR0tUMDE3MzAwLTEtMDFfMzAwV3gzMDBILmpwZ3wxNjhhOWIzMjcwOGMwMTZiZjBjMTVmOTFiZGI2N2MzZjA3MzUxNjNiMTc2Yzc0ZjIxZTZjNmNlMDc3NzI2ZDYx">
+        </div>
+        <div class="content">
+          <div class="price">880сом <span>2000сом</span>
+            <a href="payment.html" class="btn">сатып алуу</a>
+          </div>
+        </div>
+      </div>
+      <div class="box">
+        <div class="image">
+          <img src="https://storage-cdn8.gloria-jeans.ru/medias/GKT017300-3-01-300Wx300H.jpg?context=bWFzdGVyfHByb2R1Y3R8MjIwMjd8aW1hZ2UvanBlZ3xoYmYvaDU3Lzk4MDg3NTU2NTQ2ODYvR0tUMDE3MzAwLTMtMDFfMzAwV3gzMDBILmpwZ3wwNGZmODg4MGFlMjJlZjkxODIxOTFjMTVhNzBlOTUyYmJkZjAxYzI3ZmNkM2I4MGJmOWJkZjQyNjg4NmNlMWE2">
+        </div>
+        <div class="content">
+          <div class="price">880сом <span>2000сом</span>
+            <a href="payment.html" class="btn">сатып алуу</a>
+          </div>
+        </div>
+      </div>
+      <div class="box">
+        <div class="image">
+          <img src="https://storage-cdn8.gloria-jeans.ru/medias/GKT018850-1-02-300Wx300H.jpg?context=bWFzdGVyfHByb2R1Y3R8NjI2OXxpbWFnZS9qcGVnfGhiOS9oMmIvOTkxMTk5MjUxNjYzOC9HS1QwMTg4NTAtMS0wMl8zMDBXeDMwMEguanBnfGQwMTRmYjY5YWY4YjYwN2IzZDRhZWZlNDFhOTllZmFhNGExYWE4NDVmMzY5MDE0M2ZkMjcwNTE4OTgxZDJiMzQ">
+        </div>
+        <div class="content">
+          <div class="price">880сом <span>2000сом</span>
+            <a href="payment.html" class="btn">сатып алуу</a>
+          </div>
+        </div>
+      </div>
+      <div class="box">
+        <div class="image">
+          <img src="https://storage-cdn8.gloria-jeans.ru/medias/GKT018850-3-02-300Wx300H.jpg?context=bWFzdGVyfHByb2R1Y3R8MTI4MDF8aW1hZ2UvanBlZ3xoNjgvaDAyLzk5MDA5Mjk4MTA0NjIvR0tUMDE4ODUwLTMtMDJfMzAwV3gzMDBILmpwZ3xmMjdlMDliZmNiZWYzZGY3MDQzYjhlOTQ3NWE2MDVmMGVkODFmNTE1ZDkyMjE3OTE4ODA2MGFiMzA2NWE0NzYz">
+        </div>
+        <div class="content">
+          <div class="price">880сом <span>2000сом</span>
+            <a href="payment.html" class="btn">сатып алуу</a>
+          </div>
+        </div>
+      </div>
+      <div class="box">
+        <div class="image">
+          <img src="https://storage-cdn8.gloria-jeans.ru/medias/GKT018850-4-02-300Wx300H.jpg?context=bWFzdGVyfHByb2R1Y3R8MTA3MTl8aW1hZ2UvanBlZ3xoMTkvaDg5Lzk5MDA5MzE0ODE2MzAvR0tUMDE4ODUwLTQtMDJfMzAwV3gzMDBILmpwZ3w5MTM2OTM5YmNmMTEyMGFjMzk5MmYyODBjYzM5ZjEyYjlhOGNkNDJmMGFjMmQ0NzhmNmFlNGE4ZWUwMGUxYWE2">
+        </div>
+        <div class="content">
+          <div class="price">880сом <span>2000сом</span>
+            <a href="payment.html" class="btn">сатып алуу</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+    <!--trouthes section ends-->
+    <!--ties start-->
+    <section class="menu" id="ties">
+      <h1 class="heading">биздин <span>товарлар</span></h1>
+      <div class="box-container">
+        <div class="box">
+            <img src="https://storage-cdn8.gloria-jeans.ru/medias/GSK016414-1-02-300Wx300H.jpg?context=bWFzdGVyfHByb2R1Y3R8MTk2Mjd8aW1hZ2UvanBlZ3xoOTUvaGNiLzk3OTM3NTIwNzIyMjIvR1NLMDE2NDE0LTEtMDJfMzAwV3gzMDBILmpwZ3xjOWNiOTljNDM5M2E4OGU0ZGRiMjc1MWM2NjE1MmNhNzE2ZWUyOWJmYjhmNThiZDhmZmE1ZjkxMWVlNjhhNTE3" alt="">
+            <div class="content">
+              <div class="price"> 600сом<a href="payment.html" class="btn">сатып алуу</a></div>
+            </div>
+        </div>
+        <div class="box">
+         
+            <img src="https://storage-cdn8.gloria-jeans.ru/medias/GSK016821-1-02-300Wx300H.jpg?context=bWFzdGVyfHByb2R1Y3R8MzYxNzl8aW1hZ2UvanBlZ3xoY2QvaGY3Lzk4ODA3ODc3MTQwNzgvR1NLMDE2ODIxLTEtMDJfMzAwV3gzMDBILmpwZ3w1MTM3MGEwY2ZmZWUwZjU3Nzc5N2VmYzgwY2ViMWI1MGIwN2FmZjg3YmZhNjZkMzlhYWIzMGQ1OWEwODM3ZTkx" alt="">
+            <div class="content">
+              <div class="price"> 600сом<a href="payment.html" class="btn">сатып алуу</a></div>
+            </div>
+        </div>
+        <div class="box">
+            <img src="https://storage-cdn8.gloria-jeans.ru/medias/GSK016849-1-02-300Wx300H.jpg?context=bWFzdGVyfHByb2R1Y3R8MTUwMjN8aW1hZ2UvanBlZ3xoMWUvaGYyLzk5MDgwMjAyNDg2MDYvR1NLMDE2ODQ5LTEtMDJfMzAwV3gzMDBILmpwZ3w3MjgxNGU3YzM1M2RlZTFjYjg1NGYzZDY5MmI2MjBiMWFiYjNjMTliMGZlZGEwNDc1NWRkYmE5YTcxMzg0Njk4" alt="">
+            <div class="content">
+              <div class="price"> 600сом<a href="payment.html" class="btn">сатып алуу</a></div>
+            </div>
+        </div>
+        <div class="box">
+            <img src="https://storage-cdn8.gloria-jeans.ru/medias/GSK016849-2-02-300Wx300H.jpg?context=bWFzdGVyfHByb2R1Y3R8MTM0NTJ8aW1hZ2UvanBlZ3xoODYvaDFlLzk5MDgwMjIyNDc0NTQvR1NLMDE2ODQ5LTItMDJfMzAwV3gzMDBILmpwZ3w4OWM0YmEzNDgxODAzZDAyNzUwNDdhMTg1NTdlNmUwZjA0ZmRiMmZiNjIyODM0NzEyNGFmNDAwZDFmZTNlNWRk" alt="">
+            <div class="content">
+              <div class="price"> 600сом<a href="payment.html" class="btn">сатып алуу</a></div>
+            </div>
+        </div>
+        <div class="box">
+            <img src="https://storage-cdn8.gloria-jeans.ru/medias/GSK016850-1-02-300Wx300H.jpg?context=bWFzdGVyfHByb2R1Y3R8MzkxMTd8aW1hZ2UvanBlZ3xoYjkvaGI0Lzk5MDgwMjQyMTM1MzQvR1NLMDE2ODUwLTEtMDJfMzAwV3gzMDBILmpwZ3w1OTE2Mjc5NzFhNGNhNjk4ZGU2ZGQzMWZlYzkyNTQ4ZTJhYTFlMjI3YjRiNzVlZmNmZDMzMTA4OTI5YjE5NTI0" alt="">
+            <div class="content">
+              <div class="price"> 600сом<a href="payment.html" class="btn">сатып алуу</a></div>
+            </div>
+        </div>
+        <div class="box">
+            <img src="https://storage-cdn8.gloria-jeans.ru/medias/GSK016850-2-02-300Wx300H.jpg?context=bWFzdGVyfHByb2R1Y3R8MzMwNzJ8aW1hZ2UvanBlZ3xoNjEvaDQ0Lzk5MTExNTM1OTAzMDIvR1NLMDE2ODUwLTItMDJfMzAwV3gzMDBILmpwZ3xlZjQ5ODE4YzYxNWYwZjJmZjRmOTY3YTgwZGM1MmQ2NWY3OTdlZjA3NjZmMWI0ZDNlNzdkZDUwNjc3MTY0ODJh" alt="">
+            <div class="content">
+              <div class="price"> 600сом<a href="payment.html" class="btn">сатып алуу</a></div>
+            </div>
+        </div>
+      </div>
+    </section>
+  <!--ties ends-->
+  <!--shoose start-->
+  <section class="products" id="shoose">
+    <h1 class="heading">арзан<span>ДАТУУЛАР</span></h1>
+    <div class="box-container">
+      <div class="box">
+        <div class="image">
+          <img src="https://storage-cdn8.gloria-jeans.ru/medias/GPT008865-1-02-300Wx300H.jpg?context=bWFzdGVyfHByb2R1Y3R8MzcxNjN8aW1hZ2UvanBlZ3xoNTUvaDUzLzk4OTQzNDg5MTQ3MTgvR1BUMDA4ODY1LTEtMDJfMzAwV3gzMDBILmpwZ3w4NDc2YjExYjMwMGU3ZjAzZTE0NTE0OWMwMmUyZWY2NTk5OTZhMDVjOWM4YTY4YjFiZThhYzhiMzQwZmUyYzY5" alt="">
+        </div>
+        <div class="content">
+          <div class="price">600сом <span>1200сом</span> <a href="payment.html" class="btn">сатып алуу</a></div>
+        </div>
+      </div>
+      <div class="box">
+        <div class="image">
+          <img src="https://storage-cdn8.gloria-jeans.ru/medias/GAC020032-1-02-300Wx300H.jpg?context=bWFzdGVyfHByb2R1Y3R8MTU2NDB8aW1hZ2UvanBlZ3xoNTkvaDM4Lzk3NzI2MDIyNjE1MzQvR0FDMDIwMDMyLTEtMDJfMzAwV3gzMDBILmpwZ3w0NTg1MTRmYjhlNThiMGVjYWZlMGI4OTlkODk5MWZlNDI5NGU3M2MzM2MzNzAwMjRiNWM4NzFmZTQyNjZkZjUy">
+        </div>
+        <div class="content">
+          <div class="price">880сом <span>2000сом</span>
+            <a href="payment.html" class="btn">сатып алуу</a>
+          </div>
+        </div>
+      </div>
+      <div class="box">
+        <div class="image">
+          <img src="https://storage-cdn8.gloria-jeans.ru/medias/GAC020080-1-02-300Wx300H.jpg?context=bWFzdGVyfHByb2R1Y3R8MTE4NTl8aW1hZ2UvanBlZ3xoNjEvaDlhLzk5MTExOTczMzU1ODIvR0FDMDIwMDgwLTEtMDJfMzAwV3gzMDBILmpwZ3w5ZjVmMmI4ZmJhOTkxMzVhZWQyMmE1OGVlNjkzNDllOGI3NTJhODhjNmJiODNhOTNjODA0NWY4MDcyNWMwOTQz">
+        </div>
+        <div class="content">
+          <div class="price">760сом <span>2300сом</span>
+            <a href="payment.html" class="btn">сатып алуу</a>
+          </div>
+        </div>
+      </div>
+      <div class="box">
+        <div class="image">
+          <img src="https://storage-cdn8.gloria-jeans.ru/medias/GAC020080-2-02-300Wx300H.jpg?context=bWFzdGVyfHByb2R1Y3R8MTczMzh8aW1hZ2UvanBlZ3xoZTgvaGU2Lzk5MTExOTg5NzM5ODIvR0FDMDIwMDgwLTItMDJfMzAwV3gzMDBILmpwZ3xlOWM5MGYwMDg1MjU3NjQ3ZGM0NTVjYjcxNWI3MTlhMzU2YzU1YmRlZDQ0ZGMyMjIyNGVkMjlhNTIxZWYwM2Q4">
+        </div>
+        <div class="content">
+          <div class="price">880сом <span>2000сом</span>
+            <a href="payment.html" class="btn">сатып алуу</a>
+          </div>
+        </div>
+      </div>
+      <div class="box">
+        <div class="image">
+          <img src="https://storage-cdn8.gloria-jeans.ru/medias/GAC020589-1-02-300Wx300H.jpg?context=bWFzdGVyfHByb2R1Y3R8MjQxNDR8aW1hZ2UvanBlZ3xoYWYvaDZiLzk4OTU2MzUzNTM2MzAvR0FDMDIwNTg5LTEtMDJfMzAwV3gzMDBILmpwZ3xiODY2NDczYzM2ZThhNGVmYjVjNzViMTliYzM1MmI2YmY2ZGM0YzVjNzk1OTgwMjI3ZmZhMWFiMzAxOTA5MzVh">
+        </div>
+        <div class="content">
+          <div class="price">880сом <span>2000сом</span>
+            <a href="payment.html" class="btn">сатып алуу</a>
+          </div>
+        </div>
+      </div>
+      <div class="box">
+        <div class="image">
+          <img src="https://storage-cdn8.gloria-jeans.ru/medias/GAC020590-1-02-300Wx300H.jpg?context=bWFzdGVyfHByb2R1Y3R8MjQ3MzF8aW1hZ2UvanBlZ3xoNTkvaDVkLzk4OTU2MzcwMjQ3OTgvR0FDMDIwNTkwLTEtMDJfMzAwV3gzMDBILmpwZ3xkNWI3NDhkYzM2MmRhNDhiM2FhNGM2N2U4Y2YzOTFlYjA4YjZmMmU4YjE3MzU0NGFiNDVmZWJmYTI0OGI2NjE0">
+        </div>
+        <div class="content">
+          <div class="price">880сом <span>2000сом</span>
+            <a href="payment.html" class="btn">сатып алуу</a>
+          </div>
+        </div>
+      </div>
+      <div class="box">
+        <div class="image">
+          <img src="https://storage-cdn8.gloria-jeans.ru/medias/GAC020592-1-02-300Wx300H.jpg?context=bWFzdGVyfHByb2R1Y3R8MjI2NzZ8aW1hZ2UvanBlZ3xoNjYvaGRjLzk4OTU2Mzg2OTU5NjYvR0FDMDIwNTkyLTEtMDJfMzAwV3gzMDBILmpwZ3xhYjk5ZmU5YTBiMjY5M2Q1YmE3NjQyMzBiMDc2ZjhiYTEwZDEyMTc5YWQxNjNiODgxNTA4Y2VhNTUyMjUzYWFh">
+        </div>
+        <div class="content">
+          <div class="price">880сом <span>2000сом</span>
+            <a href="payment.html" class="btn">сатып алуу</a>
+          </div>
+        </div>
+      </div>
+      <div class="box">
+        <div class="image">
+          <img src="https://storage-cdn8.gloria-jeans.ru/medias/GAC020711-1-02-300Wx300H.jpg?context=bWFzdGVyfHByb2R1Y3R8MTIwMDJ8aW1hZ2UvanBlZ3xoYjMvaDBhLzk4NjU4MDA3NDQ5OTAvR0FDMDIwNzExLTEtMDJfMzAwV3gzMDBILmpwZ3w1NjU0YWQ4YzQ1NTE4ZjZiY2Q5NTZlYTEzZDg0MTZmZDI5YjBkYjk3ZDc3NjBmZTM4MDgzZWMwMzM0NGM2YTg1">
+        </div>
+        <div class="content">
+          <div class="price">880сом <span>2000сом</span>
+            <a href="payment.html" class="btn">сатып алуу</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+   <!--shoose ends-->
+    <!--footer section start-->
+<section class="footer">
+    <div class="box-container">
+      <div class="box">
+        <h3> биз жөнүндө</h3>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ducimus, ipsum ratione asperiores eveniet voluptate omnis iure. Facere autem blanditiis incidunt est harum repellat, iure asperiores minima quo reprehenderit quidem quis.</p>
+      </div>
+      <div class="box">
+        <h3>категория</h3>
+        <a href="#"><i class="fas fa-arrow-right"></i>эркек </a>
+        <a href="#"><i class="fas fa-arrow-right"></i>аял</a>
+        <a href="#"><i class="fas fa-arrow-right"></i>алуучу</a>
+        <a href="#"><i class="fas fa-arrow-right"></i>балдар</a>
+        <a href="#"><i class="fas fa-arrow-right"></i>жаңы келгендер</a>
+      </div>  
+      <div class="box">
+      <h3>ссылка</h3>
+      <a href="#home" ><i class="fas fa-arrow-right"></i>костюмдар</a>
+      <a href="#about" id="about"><i class="fas fa-arrow-right"></i>шымдар</a>
+      <a href="#menu"><i class="fas fa-arrow-right"></i>галстуктар</a>
+      <a href="#review"><i class="fas fa-arrow-right"></i>бут кийимдер</a>
+      <a href="#contact"><i class="fas fa-arrow-right"></i>биз жөнүндө</a>
+      <a href="#blog"><i class="fas fa-arrow-right"></i>блог</a>
+    </div>
+    <div class="box">
+      <h3>quick links</h3>
+      <a href="#"><i class="fas fa-arrow-right"></i>my order</a>
+      <a href="#"><i class="fas fa-arrow-right"></i>my account</a>
+      <a href="#"><i class="fas fa-arrow-right"></i>my listining</a>
+      <a href="#"><i class="fas fa-arrow-right"></i>sell now</a>
+      <a href="#"><i class="fas fa-arrow-right"></i>new offers</a>
+    </div>
+    </div>
+    <div class="share">
+      <a href="#" class="fab fa-facebook-f"></a>
+      <a href="#" class="fab fa-pinterest"></a>
+      <a href="#" class="fab fa-linkedin"></a>
+      <a href="#" class="fab fa-instagram"></a>
+      <a href="#" class="fab fa-twitter"></a>
+    </div>
+    <div class="credit">
+     &copy;нурсадык @ тарабынын жасалган Mr.nursadyk
+    </div>
+  </section>
+  <!--footer section ends-->
+  <!--script start-->
+  <script>
+  let searchform = document.querySelector('.search-from');
+
+document.querySelector('#search-btn').onclick= () =>{
+  searchform.classList.toggle('active');
+  navbar.classList.remove('active');
+    cartitem.classList.remove('active');
+
+//darc mode//
+    function darkMode() { 
+var element = document.body; 
+element.classList.toggle("dark-mode"); 
+} 
+}
+</script>
+   <!--script ends-->
+</body>
+</html>

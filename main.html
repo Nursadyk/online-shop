@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>online shop</title>
+    <!--google fonts-->
+    <link
+      rel="stylesheet"
+      href="@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&family=Raleway:wght@300&family=Roboto:wght@100;300;400;500&display=swap');"
+    />
+    <!--font links-->
+    <link
+    
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+    />
+    <link rel="stylesheet" href="Css/style.css" />
+    <!--css file link-->
+  </head>
+  <body>
+    <!--header start-->
+    <header class="header">
+      <a href="#" class="fas fa-shopping-cart"> </a>
+      <nav class="navbar">
+        <a href="#home">башкы-бет</a>
+        <a href="#about">биз-жөнүндө</a>
+        <a href="#menu">товарлар</a>
+        <a href="#review">пикирлер</a>
+        <a href="#contact">байланыш</a>
+        <a href="#blog">блог</a>
+      </nav>
+      <div class="icons">
+        <div class="fas fa-toggle-on" onclick="darkMode()"></div>
+        <div class="fas fa-shopping-cart" id="cart-btn"></div>
+        <div class="fas fa-bars" id="menu-btn"></div>
+      </div>
+      <div class="search-from">
+        <input type="search" id="search-box" placeholder="search here..." />
+        <label for="search-box" class="fas fa-search"></label>
+      </div>
+      <div class="cart-items-container">
+        <div class="cart-item">
+          <span class="fas fa-times"></span>
+          <img src="images/23.jpg.jpg" alt="" width="100px" />
+          <div class="content">
+            <h3>cart item 01</h3>
+            <div class="price">$15.99/-</div>
+          </div>
+        </div>
+        <div class="cart-item">
+          <span class="fas fa-times"></span>
+          <img src="images/5.jpg.jpg" alt="" width="100px" />
+          <div class="content">
+            <h3>cart item 01</h3>
+            <div class="price">$15.99/-</div>
+          </div>
+        </div>
+        <div class="cart-item">
+          <span class="fas fa-times"></span>
+          <img src="images/bisnes.jpg" alt="" width="100px" />
+          <div class="content">
+            <h3>cart item 01</h3>
+            <div class="price">$15.99/-</div>
+          </div>
+        </div>
+        <div class="cart-item">
+          <span class="fas fa-times"></span>
+          <img src="images/mpt.jpg" alt="" width="100px" />
+          <div class="content">
+            <h3>cart item 01</h3>
+            <div class="price">$15.99/-</div>
+          </div>
+        </div>
+        <a href="" class="btn">checkout now</a>
+      </div>
+    </header>
+    <!--header end-->
+    <!--here write section1-->
+    <section class="home" id="home">
+      <div class="content">
+        <h3>баары арзан жана сапаттуу</h3>
+        <p>
+          үйүңүздө олтуруп эле арзан баадагы жана сапаттуу кийимге ээ болгуңуз
+          келеби андай болсо биз менен байланышыңыз бизде баары арзан жана
+          сапаттуу. Байланышуу үчүн телефон: 0228 84-29-81
+        </p>
+        <a href="" class="btn">кирип көрүү</a>
+      </div>
+    </section>
+    <!--about section start-->
+    <section class="about" id="about">
+      <h1 class="heading"><span>биз</span>жөнүндө</h1>
+      <div class="row">
+        <div class="image">
+          <img
+            src="https://i.pinimg.com/originals/0e/b4/c2/0eb4c25fb70ae3f291d9d5523fda1269.jpg"
+          />
+        </div>
+        <div class="content">
+          <h3>Достор биз ачылдык</h3>
+          <p>
+            Биздин интернет магазин биздин келечегибиз боло турган жаш
+            өспүрүмдөр үчүн ачылды, сиздер биздин сайттан өзүңүзгө керек болгон
+            кийимдерди арзан жана ыңгайлуу баада таба аласыз.
+          </p>
+          <p>
+            Жана ошондой эле биздин интернет магазинде сиз издеп жүргөн кийимдер
+            жана сиз ойлогондой арзандатуулар болуп турат. Андыктан достор
+            сайтка катталабыз биздин дүкөн сиздердин келечегиңиздер үчүн кам
+            көрөт. Байланыш үчүн телефон: <span>0228 84-29-81</span>
+          </p>
+        </div>
+      </div>
+    </section>
+    <!--about section end-->
+
+    <!--menu section start-->
+
+    <section class="menu" id="menu">
+      <div class="menu__container">
+      <h1 class="heading">биздин <span>товарлар</span></h1>
+      <div class="box-container">
+        <div class="box">
+          <div class="images">
+            <img
+              src="https://www.pngitem.com/pimgs/m/121-1218915_kids-dress-png-suit-children-png-transparent-png.png"
+              alt=""
+            />
+          </div>
+          <h3>классикалык кийимдер</h3>
+          <div class="price">20% арзандатуулар</div>
+          <a href="classic-for-boys.html" class="btn">кирип көрүү</a>
+        </div>
+        <div class="box">
+          <div class="images">
+            <img
+              src="https://cpimg.tistatic.com/06308630/b/4/Kids-Cotton-Sports-Wear-Dress.jpg"
+              alt=""
+            />
+          </div>
+          <h3>спорттук кийимдер</h3>
+          <div class="price">25% арзандатуулар</div>
+          <a href="sport-for-boys.html" class="btn">кирип көрүү</a>
+        </div>
+        <div class="box">
+          <div class="images">
+            <img
+              src="https://ae01.alicdn.com/kf/H1e9ba042be354c6ea021bf74c1634f610/Summer-Kids-Boys-Pajamas-Sets-Cotton-Pyjamas-Teen-Girls-Sleepwear-Teenage-Clothing-Sets-Children-Home-Clothes.jpg_Q90.jpg_.webp"
+              alt=""
+            />
+          </div>
+          <h3>үй кийимдери</h3>
+          <div class="price">15% арзандатуулар</div>
+          <a href="house-clothes-for-boys.html" class="btn">кирип көрүү</a>
+        </div>
+        <div class="box">
+          <div class="images">
+            <img
+              src="https://www.dhresource.com/0x0/f2/albu/g10/M00/19/95/rBVaWVznIfSAAjiSAAGfQGoD6gg191.jpg"
+              alt=""
+            />
+          </div>
+          <h3>классикалык кийимдер</h3>
+          <div class="price">25% арзандатуулар</div>
+          <a href="classic-for-girls.html" class="btn">кирип көрүү</a>
+        </div>
+        <div class="box">
+          <div class="images">
+            <img
+              src="https://timbo.ua/picture/images/goods/K074993/2-auto-auto.jpg"
+              alt=""
+            />
+          </div>
+          <h3>спорттук кийимдер</h3>
+          <div class="price">25% арзандатуулар</div>
+          <a href="sport-for-girls.html" class="btn">кирип көрүү</a>
+        </div>
+        <div class="box">
+          <div class="images">
+            <img
+              src="https://ae01.alicdn.com/kf/S496348a7f0cd4b6d90d7d2dadb18136eg/Children-Clothes-Girls-Toca-Life-World-House-T-Shirts-Cotton-Comfortable-Summer-Tops-Tocas-Clothes-Kid.jpg"
+              alt=""
+            />
+          </div>
+          <h3>үй кийимдери</h3>
+          <div class="price">25% арзандатуулар</div>
+          <a href="house-clothes-for-girls.html" class="btn">кирип көрүү</a>
+        </div>
+      </div>
+    </div>
+    </section>
+    <!--menu section ends-->
+
+    <section class="products" id="products">
+      <h1 class="heading">арзан<span>ДАТУУЛАР</span></h1>
+      <div class="box-container">
+        <div class="box">
+          <div class="icons">
+            <span href="#" class="fas fa-heart" onclick="big()" id="big"></span>
+            <span href="#" class="fas fa-eye" onclick="big2()" id="big2"></span>
+          </div>
+          <div class="image">
+            <img
+              src="https://i.pinimg.com/564x/c2/31/5d/c2315de19057ad1af164ebdefba34ae2.jpg"
+              alt=""
+            />
+          </div>
+          <div class="content">
+            <div class="stars">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star-half-alt"></i>
+            </div>
+            <div class="price">600сом <span>1200сом</span></div>
+            <a href="action.html" class="btn">кирип көрүү</a>
+          </div>
+        </div>
+        <div class="box">
+          <div class="icons">
+            <span
+              href="#"
+              class="fas fa-heart"
+              onclick="big3()"
+              id="big3"
+            ></span>
+            <span href="#" class="fas fa-eye" onclick="big4()" id="big4"></span>
+          </div>
+          <div class="image">
+            <img
+              src="https://i.pinimg.com/564x/a4/f8/8c/a4f88c676863640396dedb1c5964ecab.jpg"
+            />
+          </div>
+          <div class="content">
+            <div class="stars">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star-half-alt"></i>
+            </div>
+            <div class="price">880сом <span>2000сом</span></div>
+            <a href="action-one.html" class="btn">кирип көрүү</a>
+          </div>
+        </div>
+        <div class="box">
+          <div class="icons">
+            <span
+              href="#"
+              class="fas fa-heart"
+              onclick="big5()"
+              id="big5"
+            ></span>
+            <span
+              href="#"
+              class="fas fa-eye"
+              onclick="bigend()"
+              id="big6"
+            ></span>
+          </div>
+          <div class="image">
+            <img
+              src="https://i.pinimg.com/564x/e8/13/1b/e8131b5a3c57ed4536942353b0c51d99.jpg"
+            />
+          </div>
+          <div class="content">
+            <div class="stars">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star-half-alt"></i>
+            </div>
+            <div class="price">760сом <span>2300сом</span></div>
+            <a href="actio-two.html" class="btn">кирип көрүү</a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--review section start-->
+    <section class="review" id="review">
+      <h1 class="heading">кардарлардын <span> пикири</span></h1>
+      <div class="box-container">
+        <div class="box">
+          <img src="images/bisnes.jpg" alt="" class="user" />
+          <h3>бектур иманалиев</h3>
+          <div class="stars">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star-half-alt"></i>
+          </div>
+          <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cum
+            facilis eos fuga nobis magnam? Nulla nesciunt totam veniam eos sequi
+            hic. Iste quibusdam assumenda quaerat voluptatum! Eaque corrupti
+            reprehenderit pariatur.
+          </p>
+        </div>
+        <div class="box">
+          <img src="images/bisnes.jpg" alt="" class="user" />
+          <h3>Мырзагүл артык кызы</h3>
+          <div class="stars">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star-half-alt"></i>
+          </div>
+          <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cum
+            facilis eos fuga nobis magnam? Nulla nesciunt totam veniam eos sequi
+            hic. Iste quibusdam assumenda quaerat voluptatum! Eaque corrupti
+            reprehenderit pariatur.
+          </p>
+        </div>
+        <div class="box">
+          <img src="images/bisnes.jpg" alt="" class="user" />
+          <h3>жолдошбек кубанычов</h3>
+          <div class="stars">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star-half-alt"></i>
+          </div>
+          <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cum
+            facilis eos fuga nobis magnam? Nulla nesciunt totam veniam eos sequi
+            hic. Iste quibusdam assumenda quaerat voluptatum! Eaque corrupti
+            reprehenderit pariatur.
+          </p>
+        </div>
+      </div>
+    </section>
+    <!--review section ends-->
+
+    <!--contact section-->
+    <section class="contact" id="contact">
+      <h1 class="heading">байла<span>НЫШУУ</span></h1>
+      <div class="row">
+        <form method="post">
+          <input type="text" id="name" placeholder="аты жөнүңүз" required />
+          <input type="email" id="email" placeholder="email почтаңыз" />
+          <input type="text" id="phone" placeholder="телефон номериңиз" />
+          <textarea id="message" rows="4" placeholder="ой пикир"></textarea>
+          <button type="submit" id="submit-btn">жөнөтүү</button>
+        </form>
+        <iframe
+          class="map"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d48223.772080660354!2d72.94535577345749!3d40.93797939202377!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38bd15d8a133b83b%3A0x90171ce532ac790!2z0JLQm9Ca0KHQnA!5e0!3m2!1sru!2skg!4v1676027296875!5m2!1sru!2skg"
+          width="600"
+          height="450"
+          style="border: 0"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        ></iframe>
+      </div>
+    </section>
+    <!--contact section ends-->
+
+    <!--blog section starts-->
+    <section class="blog" id="blog">
+      <h1 class="heading">биздин <span> блог</span></h1>
+      <div class="box-container">
+        <div class="box">
+          <div class="images">
+            <img src="images/bisnes.jpg" alt="" />
+          </div>
+          <div class="content">
+            <span>биздин блог</span>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicin</p>
+            <a href="#" class="btn">кененирээк</a>
+          </div>
+        </div>
+        <div class="box">
+          <div class="images">
+            <img src="images/bisnes.jpg" alt="" />
+          </div>
+          <div class="content">
+            <span>биздин блог</span>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicin</p>
+            <a href="#" class="btn">кененирээк</a>
+          </div>
+        </div>
+        <div class="box">
+          <div class="images">
+            <img src="images/bisnes.jpg" alt="" />
+          </div>
+          <div class="content">
+            <span>биздин блог</span>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicin</p>
+            <a href="#" class="btn">кененирээк</a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--blog section ends-->
+    <!--footer section start-->
+    <section class="footer">
+      <div class="box-container">
+        <div class="box">
+          <h3>Биз жөнүндө</h3>
+          <p>
+            Биздин интернет магазин биздин келечегибиз боло турган жаш
+            өспүрүмдөр үчүн ачылды, сиздер биздин сайттан өзүңүзгө керек болгон
+            кийимдерди арзан жана ыңгайлуу баада таба аласыз. Жана ошондой эле
+            биздин интернет магазинде сиз издеп жүргөн кийимдер жана сиз
+            ойлогондой арзандатуулар болуп турат. Андыктан достор сайтка
+            катталабыз биздин дүкөн сиздердин келечегиңиздер үчүн кам көрөт.
+            Байланыш үчүн телефон: <span>0228 84-29-81</span>
+          </p>
+        </div>
+        <div class="box">
+          <h3>категория</h3>
+          <a href="#"><i class="fas fa-arrow-right"></i>эркек </a>
+          <a href="#"><i class="fas fa-arrow-right"></i>аял</a>
+          <a href="#"><i class="fas fa-arrow-right"></i>алуучу</a>
+          <a href="#"><i class="fas fa-arrow-right"></i>балдар</a>
+          <a href="#"><i class="fas fa-arrow-right"></i>жаңы келгендер</a>
+        </div>
+        <div class="box">
+          <h3>ссылка</h3>
+          <a href="#home"><i class="fas fa-arrow-right"></i>башкы-бет</a>
+          <a href="#about" id="about"
+            ><i class="fas fa-arrow-right"></i>биз-жөнүндө</a
+          >
+          <a href="#menu"><i class="fas fa-arrow-right"></i>товарлар</a>
+          <a href="#review"><i class="fas fa-arrow-right"></i>пикирлер</a>
+          <a href="#contact"><i class="fas fa-arrow-right"></i>байланыш</a>
+          <a href="#blog"><i class="fas fa-arrow-right"></i>блог</a>
+        </div>
+        <div class="box">
+          <h3>байланыш</h3>
+          <a href="#"
+            ><i class="fas fa-arrow-right"></i> <span>0228 84-29-81</span></a
+          >
+          <a href="#"
+            ><i class="fas fa-arrow-right"></i>Email: bektur@gmail.com</a
+          >
+          <a href="#"><i class="fas fa-arrow-right"></i>иштөө убакыты:</a>
+          <a href="#"><i class="fas fa-arrow-right"></i>8:00 9:00чейин</a>
+          <a href="#"><i class="fas fa-arrow-right"></i>дем алышсыз</a>
+        </div>
+      </div>
+      <div class="share">
+        <a href="https://facebook.com" class="fab fa-facebook-f"></a>
+        <a href="https://pinterest.com" class="fab fa-pinterest"></a>
+        <a href="https://linkedin.com" class="fab fa-linkedin"></a>
+        <a href="https://instsgram.com" class="fab fa-instagram"></a>
+        <a href="https://twitter.com" class="fab fa-twitter"></a>
+      </div>
+      <div class="credit">&copy;Ислам @ тарабынын жасалган Mr.ислам</div>
+    </section>
+    <!--footer section ends-->
+
+    <!--here write script-->
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script>
+     let btn_submit=document.getElementById('btn-submit');
+     btn_submit.addEventListener('click',function(e){
+      e.preventDefault()
+      let name=document.getElementById('name').value;
+      let email=document.getElementById('email').value;
+      let phone=document.getElementById('phone').value;
+      let message=document.getElementById('message').value;
+      let body='name: '+ name +'<br/> email: ' + email + '<br/> phone' + phone +'<br/> message '+ message;
+      
+        Email.send({
+          Host: "smtp.gmail.com",
+          Username: "tugolbajuulunursadyk@gmail.com",
+          Password: "nursadyk19912001",
+          To: "tugolbajuulunursadyk@gmail.com",
+          From: email,
+          Subject: phone,
+          Body: body,
+        }).then(
+        message => alert(message)
+        );
+      })
+    </script>
+    <script>
+      let navbar = document.querySelector(".navbar");
+
+      document.querySelector("#menu-btn").onclick = () => {
+        navbar.classList.toggle("active");
+        cartitem.classList.remove("active");
+      };
+      let cartitem = document.querySelector(".cart-items-container");
+
+      document.querySelector("#cart-btn").onclick = () => {
+        cartitem.classList.toggle("active");
+        navbar.classList.remove("active");
+      };
+      window.onscroll = () => {
+        navbar.classList.remove("active");
+        cartitem.classList.remove("active");
+      };
+      //serchbar start
+      var LastResFind = "";
+      var copy_page = "";
+      function TrimStr(s) {
+        s = s.replace(/^\s+/g, "");
+        return s.replace(/\s+$/g, "");
+      }
+      function FindOnPage(inputId) {
+        var obj = window.document.getElementById(inputId);
+        var textToFind;
+        if (obj) {
+          textToFind = TrimStr(obj.value);
+        } else {
+          alert("киргизилген сөз табылган жок");
+          return;
+        }
+        if (textToFind == "") {
+          alert("сиз эч нерсе жазган жоксуз");
+          return;
+        }
+        if (document.body.innerHTML.indexOf(textToFind) == "-1")
+          alert("ничего нетнайдено");
+        if (copy_page.length > 0) document.body.innerHTML = copy_page;
+        else copy_page = document.body.innerHTML;
+        document.body.innerHTML = document.body.innerHTML.replace(
+          eval("/name=" + LastResFind + "/gi"),
+          ""
+        );
+        document.body.innerHTML = document.body.innerHTML.replace(
+          eval("/" + textToFind + "/gi"),
+          "<a name =" +
+            textToFind +
+            " style='color:red'>" +
+            textToFind +
+            "</a>"
+        );
+        LastResFind = textToFind;
+        window.location = "#" + textToFind;
+      }
+      //searchbar ends
+      //here write darckmode//
+      function darkMode() {
+        var element = document.body;
+        element.classList.toggle("dark-mode");
+      }
+      const wrapper = document.querySelector(".wrapper"),
+        signupHeader = document.querySelector(".signup header"),
+        loginHeader = document.querySelector(".login header");
+
+      loginHeader.addEventListener("click", () => {
+        wrapper.classList.add("active");
+      });
+      signupHeader.addEventListener("click", () => {
+        wrapper.classList.remove("active");
+      });
+      function big() {
+        document.getElementById("big").style.fontSize = "2.5rem";
+      }
+      function big2() {
+        document.getElementById("big2").style.fontSize = "2.5rem";
+      }
+      function big3() {
+        document.getElementById("big3").style.fontSize = "2.5rem";
+      }
+      function big4() {
+        document.getElementById("big4").style.fontSize = "2.5rem";
+      }
+      function big5() {
+        document.getElementById("big5").style.fontSize = "2.5rem";
+      }
+      function bigend() {
+        document.getElementById("big6").style.fontSize = "2.5rem";
+      }
+    </script>
+        </script>
+  </body>
+</html>

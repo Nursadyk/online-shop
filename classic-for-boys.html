@@ -1,0 +1,725 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our menu</title>
+     <!--google fonts-->
+<link rel="stylesheet" href="@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&family=Raleway:wght@300&family=Roboto:wght@100;300;400;500&display=swap');">
+<!--font links-->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+<link rel="stylesheet" href="Css/style.css">
+<!--css file link-->
+    <style>
+        :root{
+    --red:#eb4d4b;
+    --black:#130f40;
+    --light:#666;
+    --border:.1rem solid rgba(0,0,0,.3);
+    --box-shadow: 0.5rem 0.5rem rgba(0,0,0,.1);
+  }
+        *{
+font-family: 'Roboto', sans-serif;
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+outline: none;
+border: none;
+text-decoration: none;
+text-transform: capitalize;
+transform: .2s linear;
+}
+html{
+font-size: 62.5%;
+overflow-x: hidden;
+scroll-padding-top: 9rem;
+scroll-behavior: smooth;
+}
+html::-webkit-scrollbar{
+width: .8rem;
+
+}
+html::-webkit-scrollbar-thumb{
+background: var(--red);
+border-radius: 5rem;
+}
+section{
+    margin-top: 5rem;
+    padding: 5rem;
+}
+.btn{
+margin-top: 1rem;
+display:inline-block;
+padding: .9rem 3rem;
+font-size: 1.7rem;
+color: #fff;
+background: var(--red);
+cursor: pointer;
+border-radius: 2rem;
+}
+.btn:hover{
+letter-spacing: .2rem;
+}
+.heading{
+text-align: center;
+color: var(--black);
+text-transform: uppercase;
+padding-bottom: 3.5rem;
+font-size: 4rem;
+}
+.heading span{
+text-align: center;
+color: var(--red);
+}
+.dark-mode{ 
+background: #000; 
+color: #fff; 
+} 
+        .header{
+        background:#fff;
+        display: flex;
+        justify-content:space-between;
+        align-items: center;
+        padding: 1.5rem 7%;
+        border-bottom: var(--border);
+        position: fixed;
+        top: 0;left: 0;right: 0;
+        z-index: 1000;
+        box-shadow: var(--box-shadow);
+        }
+        .header a{
+          font-size: 3rem;
+          color: var(--red);
+        }
+        .header .fa-shopping-cart{
+        font-size: 3rem;
+        color: var(--red);
+        }
+        .header .navbar a{
+        margin: 0 1.5rem;
+        font-size: 1.6rem;
+        color: var(--light);
+        }
+        .header .navbar a:hover{
+        color: var(--red);
+        border-bottom: .1rem solid var(--red);
+        padding-bottom: .5rem;
+        }
+        .header .icons div{
+        color: var(--light);
+        cursor: pointer;
+        font-size: 2.5rem;
+        margin-left: 2rem;
+        }
+        .header .icons div:hover{
+        color: var(--red);
+        }
+        #menu-btn{
+        display: none;
+        }
+        .header .search-from{
+        position:absolute;
+        top: 115%; right: 7%;
+        background: #fff;
+        width: 50rem;
+        height: 5rem;
+        display: flex;
+        align-items: center;
+        transform: scaleY(0);
+        transform-origin: top;
+        }
+        .header .search-from.active{
+        transform: scaleY(1);
+        }
+        .header .search-from input{
+        height: 100%;
+        width: 100%;
+        font-size: 1.6rem;
+        color: var(--black);
+        padding: 1rem;
+        text-transform: none;
+        }
+        .header .search-from label{
+        cursor: pointer;
+        font-size: 2.2rem;
+        margin-right: 1.5rem;
+        color: var(--black);
+        }
+        .header .search-from label:hover{
+        color: var(--main-color);
+        }
+        
+
+
+
+
+
+
+
+
+
+      /*media vewport*/
+@media(max-width:991px){
+html{
+font-size: 50%;
+}
+.header{
+padding: 1.5rem 2rem;
+}
+section{
+padding: 2rem;
+}
+}
+@media(max-width:768px){
+#menu-btn{
+display:inline-block;
+}
+.header .navbar{
+position: absolute;
+top: 100%; right: -100%;
+background: #fff;
+width: 30rem;
+height: calc(100vh - 9.5rem);
+}
+.header .navbar.active{
+right: 0;
+}
+.header .navbar a{
+display:block;
+color: var(--black);
+margin: 1.5rem;
+padding: .5rem;
+font-size: 2rem;
+}
+.header .search-from{
+width: 90%;
+right: 2rem;
+}
+.home{
+background-position: left;
+justify-content: center;
+text-align: center;
+}
+.home .content h3{
+font-size: 4.5rem;
+}
+.home .content p{
+font-size: 1.5rem;
+}
+}
+@media(max-width:450px){
+html{
+font-size: 50%;
+}
+.home .content h3{
+font-size: 1.5rem;
+text-align: left;
+}
+.footer .box-container .box{
+  text-align: center;
+}
+}
+/*media vewport end*/
+
+
+
+.menu .box-container{
+display:grid;
+grid-template-columns: repeat(auto-fit, minmax(40rem, 1fr));
+gap: 1.5rem;
+}
+.menu .box-container .box{
+    text-align: center;
+    border: var(--border);
+    height: 40rem;
+    margin-bottom: 8rem;
+}
+.menu .box-container img{
+height:100%;
+width: 100%;
+object-fit: cover;
+}
+.menu .box-container .box .price{
+  max-width: 20rem;
+  margin: 0 auto;
+  color: var(--red);
+  font-size: 2.5rem;
+}
+.products .box-container{
+display:grid;
+grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+gap: 1.5rem;
+}
+.products .box-container .box{
+text-align: center;
+border: var(--border);
+padding:2rem;
+}
+.products .box-container .box .icons span{
+height: 5rem;
+width: 5rem;
+line-height: 5rem;
+font-size: 2rem;
+border: var(--border);
+color: var(--red);
+margin:.2rem 1.5rem 0;
+cursor: pointer;
+}
+.products .box-container .box .icons a:hover{
+background: var(--light);
+}
+.products .box-container .box .image{
+padding: 2.5rem 0;
+}
+.products .box-container .box .image{
+padding: 2.5rem 0;
+}
+.products .box-container .box .image img{
+height: 25rem;
+}
+.products .box-container .box .content h3{
+color: var(--black);
+font-size: 2.5rem;
+}
+.products .box-container .box .content .stars{
+padding: 1.5rem;
+}
+.products .box-container .box .content .stars i{
+font-size: 1.7rem;
+color: var(--red);
+}
+.products .box-container .box .content .price{
+  color: var(--red);
+  font-size: 2.5rem;
+}
+.products .box-container .box .content .price span{
+  font-size: 1.5rem;
+  text-decoration: line-through;
+  font-weight: lighter;
+
+}
+.footer{
+        background:#f9f9f9;
+      }
+      .footer .box-container{
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+        gap: 1.5rem;
+      }
+      .footer .box-container .box h3{
+        font-size: 2.2rem;
+        color: var(--black);
+        padding: 1rem 0;
+      }
+      .footer .box-container .box p{
+        font-size: 1.4rem;
+        color: var(--light);
+        padding: 1rem 0;
+      }
+      .footer .box-container .box a{
+        display: block;
+        font-size: 1.4rem;
+        color: var(--light);
+        padding: 1rem 0;
+      }
+      .footer .box-container .box a:hover{
+        color: var(--red);
+      }
+      .footer .box-container .box a i{
+        padding-right: .5rem;
+        color: var(--red);
+
+      }
+      .footer .box-container .box a i:hover{
+        padding-right: 2rem;
+      }
+      .footer .share{
+        padding-top: 2rem;
+        text-align: center;
+      }
+      .footer .share a{
+        height: 5rem;
+        width: 5rem;
+        line-height: 5rem;
+        border-radius: 50%;
+        background: var(--black);
+        color: #fff;
+        margin: .3rem;
+      }
+      .footer .share a:hover{
+        background: var(--red);
+        transform: rotate(360deg);
+      }
+      .footer .credit{
+        margin-top: 2.5rem;
+        padding: 1rem;
+        border-top:var(--border);
+        text-align: center;
+        color: var(--light);
+      }
+    </style>
+</head>
+<body>
+    <!--header start-->
+<header class="header">
+    <a href="main.html" class="fas fa-arrow-left">
+    </a>
+    <nav class="navbar">
+      <a href="#suits">костюмдар</a>
+      <a href="#trouthes">шымдар</a>
+      <a href="#ties">галстуктар</a>
+      <a href="#shoose">бут кийимдер</a>
+    </nav>
+    <div class="icons">
+     <div class="fas fa-toggle-on" onclick="darkMode()"></div>
+      <div class="fas fa-search" id="search-btn"></div>
+      <div class="fas fa-bars" id="menu-btn"></div>
+    </div>
+    <div class="search-from">
+        <input type="search" id="search-box" placeholder="search here...">
+        <label for="search-box" class="fas fa-search"></label>
+      </div>
+  </header>
+  <!--header end-->
+  <!--section start-->
+  <section class="menu" id="suits">
+    <h1 class="heading">биздин <span>товарлар</span></h1>
+    <div class="box-container">
+      <div class="box">
+        <img src="https://www.pngitem.com/pimgs/m/121-1218915_kids-dress-png-suit-children-png-transparent-png.png" alt="">
+        <div class="content">
+          <div class="price"> 600сом<a href="payment.html" class="btn">сатып алуу</a></div>
+        </div>
+      </div>
+      <div class="box">
+        <img src="https://www.pngitem.com/pimgs/m/248-2489832_suit-png-download-child-suit-png-transparent-png.png" alt="">
+        <div class="content">
+          <div class="price"> 600сом<a href="payment.html" class="btn">сатып алуу</a></div>
+        </div>
+      </div>
+      <div class="box">
+        <img src="https://ae01.alicdn.com/kf/HTB1RUHRL5LaK1RjSZFxq6ymPFXaS/Kids-Floral-Wedding-Suit-Japanese-Flower-Boys-Blazer-Jacket-Vest-Pants-Formal-Dress-Children-Graduation-Tuxedos.jpg" alt="">
+        <div class="content">
+          <div class="price"> 600сом<a href="payment.html" class="btn">сатып алуу</a></div>
+        </div>
+      </div>
+      <div class="box">
+        <img src="https://soranews24.com/wp-content/uploads/sites/3/2016/01/kj-0.png" alt="">
+        <div class="content">
+          <div class="price"> 600сом<a href="payment.html" class="btn">сатып алуу</a></div>
+        </div>
+      </div>
+      <div class="box">
+        <img src="https://ae01.alicdn.com/kf/HTB1IlYkNZbpK1RjSZFyq6x_qFXau/Wedding-Suit-For-Flower-Boys-Children-Formal-Blazer-Jacket-Vest-Pants-Tie-4pcs-Tuxedo-School-Kids.jpg_640x640.jpg" alt="">
+        <div class="content">
+          <div class="price"> 600сом<a href="payment.html" class="btn">сатып алуу</a></div>
+        </div>
+      </div>
+      <div class="box">
+        <img src="https://ae01.alicdn.com/kf/HTB1_7C_N3TqK1RjSZPhq6xfOFXaS/Wedding-Suit-For-Flower-Boys-Children-Formal-Blazer-Jacket-Vest-Pants-Tie-4pcs-Tuxedo-Kids-Gentleman.jpg_640x640.jpg" alt="">
+        <div class="content">
+          <div class="price"> 600сом<a href="payment.html" class="btn">сатып алуу</a></div>
+        </div>
+      </div>
+      <div class="box">
+        <img src="https://ae01.alicdn.com/kf/Hf7d3cfe2b5cf43308e18e534a1a3d10ax.jpg" alt="">
+        <div class="content">
+          <div class="price"> 600сом<a href="payment.html" class="btn">сатып алуу</a></div>
+        </div>
+      </div>
+      <div class="box">
+        <img src="https://ae01.alicdn.com/kf/S9d3979f8eff540c7a4feef839f854be0X/Flower-Boys-Wedding-Suit-Children-Formal-Blazer-Jacket-Vest-Pants-Bowtie-4PCS-Clothing-Set-Kids-Performance.jpg_640x640.jpg" alt="">
+        <div class="content">
+          <div class="price"> 600сом<a href="payment.html" class="btn">сатып алуу</a></div>
+        </div>
+      </div>
+      <div class="box">
+        
+        <img src="https://ae01.alicdn.com/kf/HTB1jjAsqSBYBeNjy0Feq6znmFXaC.jpg" alt="">
+        <div class="content">
+          <div class="price"> 600сом<a href="payment.html" class="btn">сатып алуу</a></div>
+        </div>
+      </div>
+        
+    </div>
+  </section>
+  <!--suits section ends-->
+  <!--trouthes section start-->
+  <section class="products" id="trouthes">
+    <h1 class="heading">арзан<span>ДАТУУЛАР</span></h1>
+    <div class="box-container">
+      <div class="box">
+        <div class="image">
+          <img src="https://cdn.danielonline.ru/upload/resize_cache/iblock/06f/363_477_1/gbgc02iisjfwwcu7pgkyblxsd2ejt6b1.jpg" alt="">
+        </div>
+        <div class="content">
+          <div class="price">600сом <span>1200сом</span> <a href="payment.html" class="btn">сатып алуу</a></div>
+        </div>
+      </div>
+      <div class="box">
+        <div class="image">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTl6VqX5IjFJNSIpRNG2SzgFPinf4VSInRIZAAjEhLr6Tcdch4HvbLdZJ_UKmxcSWOA0Vs&usqp=CAU">
+        </div>
+        <div class="content">
+          <div class="price">880сом <span>2000сом</span>
+            <a href="payment.html" class="btn">сатып алуу</a>
+          </div>
+        </div>
+      </div>
+      <div class="box">
+        <div class="image">
+          <img src="https://cdn.danielonline.ru/upload/resize_cache/iblock/962/363_477_1/d88phyhs083zmragb1y2mpedgje4bajj.jpg">
+        </div>
+        <div class="content">
+          <div class="price">760сом <span>2300сом</span>
+            <a href="payment.html" class="btn">сатып алуу</a>
+          </div>
+        </div>
+      </div>
+      <div class="box">
+        <div class="image">
+          <img src="https://i.pinimg.com/564x/f0/59/09/f05909cc4dea7f2d56d78d1830a50972.jpg">
+        </div>
+        <div class="content">
+          <div class="price">880сом <span>2000сом</span>
+            <a href="payment.html" class="btn">сатып алуу</a>
+          </div>
+        </div>
+      </div>
+      <div class="box">
+        <div class="image">
+          <img src="https://www.lookbuck.com/system/products/items/images/012/587/155/small/01_808.jpg?1508058958">
+        </div>
+        <div class="content">
+          <div class="price">880сом <span>2000сом</span>
+            <a href="payment.html" class="btn">сатып алуу</a>
+          </div>
+        </div>
+      </div>
+      <div class="box">
+        <div class="image">
+          <img src="https://i.pinimg.com/564x/d5/b5/f4/d5b5f4aab81677d845fa7ce570d9e2c4.jpg">
+        </div>
+        <div class="content">
+          <div class="price">880сом <span>2000сом</span>
+            <a href="payment.html" class="btn">сатып алуу</a>
+          </div>
+        </div>
+      </div>
+      <div class="box">
+        <div class="image">
+          <img src="https://i.pinimg.com/564x/3e/00/70/3e007098065e8288ae2c2402fd7b3808.jpg">
+        </div>
+        <div class="content">
+          <div class="price">880сом <span>2000сом</span>
+            <a href="payment.html" class="btn">сатып алуу</a>
+          </div>
+        </div>
+      </div>
+      <div class="box">
+        <div class="image">
+          <img src="https://cdn.danielonline.ru/upload/resize_cache/iblock/820/363_477_1/shs85lciq6iwv48bw6hssp5d6w06oxem.jpg">
+        </div>
+        <div class="content">
+          <div class="price">880сом <span>2000сом</span>
+            <a href="payment.html" class="btn">сатып алуу</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+    <!--trouthes section ends-->
+    <!--ties start-->
+    <section class="menu" id="ties">
+      <h1 class="heading">биздин <span>товарлар</span></h1>
+      <div class="box-container">
+        <div class="box">
+            <img src="https://i.pinimg.com/564x/69/f7/6f/69f76fea47aa7e4e9d1b1214dc597f8b.jpg" alt="">
+            <div class="content">
+              <div class="price"> 600сом<a href="payment.html" class="btn">сатып алуу</a></div>
+            </div>
+        </div>
+        <div class="box">
+         
+            <img src="https://i.pinimg.com/564x/82/c1/52/82c152cb8d5fd90272199e4842aa9684.jpg" alt="">
+            <div class="content">
+              <div class="price"> 600сом<a href="payment.html" class="btn">сатып алуу</a></div>
+            </div>
+        </div>
+        <div class="box">
+            <img src="https://i.pinimg.com/564x/7c/72/1a/7c721a3471ae5b9dccc6b2fbec6fefa5.jpg" alt="">
+            <div class="content">
+              <div class="price"> 600сом<a href="payment.html" class="btn">сатып алуу</a></div>
+            </div>
+        </div>
+        <div class="box">
+            <img src="https://i.pinimg.com/564x/81/42/5b/81425bafb1f10e5f6c622e0209943874.jpg" alt="">
+            <div class="content">
+              <div class="price"> 600сом<a href="payment.html" class="btn">сатып алуу</a></div>
+            </div>
+        </div>
+        <div class="box">
+            <img src="https://i.pinimg.com/564x/15/cf/30/15cf30f589eb5daa9e587f230bf63ec6.jpg" alt="">
+            <div class="content">
+              <div class="price"> 600сом<a href="payment.html" class="btn">сатып алуу</a></div>
+            </div>
+        </div>
+        <div class="box">
+            <img src="https://i.pinimg.com/564x/ea/8c/ec/ea8ceca2429af96d34d5557ad7bb539b.jpg" alt="">
+            <div class="content">
+              <div class="price"> 600сом<a href="payment.html" class="btn">сатып алуу</a></div>
+            </div>
+        </div>
+      </div>
+    </section>
+  <!--ties ends-->
+  <!--shoose start-->
+  <section class="products" id="shoose">
+    <h1 class="heading">арзан<span>ДАТУУЛАР</span></h1>
+    <div class="box-container">
+      <div class="box">
+        <div class="image">
+          <img src="https://ae04.alicdn.com/kf/Sd1c5427bf7954dec90ede33ea2bedcd4k/-.jpg_640x640.jpg" alt="">
+        </div>
+        <div class="content">
+          <div class="price">600сом <span>1200сом</span> <a href="payment.html" class="btn">сатып алуу</a></div>
+        </div>
+      </div>
+      <div class="box">
+        <div class="image">
+          <img src="https://ae04.alicdn.com/kf/H9ba5f3683f7a469bb96ca6a88aeb78c4E/2022-DESAI.jpg">
+        </div>
+        <div class="content">
+          <div class="price">880сом <span>2000сом</span>
+            <a href="payment.html" class="btn">сатып алуу</a>
+          </div>
+        </div>
+      </div>
+      <div class="box">
+        <div class="image">
+          <img src="https://ae01.alicdn.com/kf/HTB1k67UaHvpK1RjSZPiq6zmwXXaD.jpg">
+        </div>
+        <div class="content">
+          <div class="price">760сом <span>2300сом</span>
+            <a href="payment.html" class="btn">сатып алуу</a>
+          </div>
+        </div>
+      </div>
+      <div class="box">
+        <div class="image">
+          <img src="https://ae04.alicdn.com/kf/S11980752512a45b48771eb38174a8a29K/-.jpg">
+        </div>
+        <div class="content">
+          <div class="price">880сом <span>2000сом</span>
+            <a href="payment.html" class="btn">сатып алуу</a>
+          </div>
+        </div>
+      </div>
+      <div class="box">
+        <div class="image">
+          <img src="https://i.pinimg.com/564x/b5/d7/d1/b5d7d1e6f203828ec1d09efd3c76412b.jpg">
+        </div>
+        <div class="content">
+          <div class="price">880сом <span>2000сом</span>
+            <a href="payment.html" class="btn">сатып алуу</a>
+          </div>
+        </div>
+      </div>
+      <div class="box">
+        <div class="image">
+          <img src="https://i.pinimg.com/564x/80/56/a9/8056a90561426cb2a9954b01432385b8.jpg">
+        </div>
+        <div class="content">
+          <div class="price">880сом <span>2000сом</span>
+            <a href="payment.html" class="btn">сатып алуу</a>
+          </div>
+        </div>
+      </div>
+      <div class="box">
+        <div class="image">
+          <img src="https://i.pinimg.com/564x/62/be/d6/62bed62cbc9bc56024d7baed4226b395.jpg">
+        </div>
+        <div class="content">
+          <div class="price">880сом <span>2000сом</span>
+            <a href="payment.html" class="btn">сатып алуу</a>
+          </div>
+        </div>
+      </div>
+      <div class="box">
+        <div class="image">
+          <img src="https://i.pinimg.com/564x/0e/56/92/0e56921624315d1768f7821ae8e7b05e.jpg">
+        </div>
+        <div class="content">
+          <div class="price">880сом <span>2000сом</span>
+            <a href="payment.html" class="btn">сатып алуу</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+   <!--shoose ends-->
+    <!--footer section start-->
+<section class="footer">
+    <div class="box-container">
+      <div class="box">
+        <h3> биз жөнүндө</h3>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ducimus, ipsum ratione asperiores eveniet voluptate omnis iure. Facere autem blanditiis incidunt est harum repellat, iure asperiores minima quo reprehenderit quidem quis.</p>
+      </div>
+      <div class="box">
+        <h3>категория</h3>
+        <a href="#"><i class="fas fa-arrow-right"></i>эркек </a>
+        <a href="#"><i class="fas fa-arrow-right"></i>аял</a>
+        <a href="#"><i class="fas fa-arrow-right"></i>алуучу</a>
+        <a href="#"><i class="fas fa-arrow-right"></i>балдар</a>
+        <a href="#"><i class="fas fa-arrow-right"></i>жаңы келгендер</a>
+      </div>  
+      <div class="box">
+      <h3>ссылка</h3>
+      <a href="#home" ><i class="fas fa-arrow-right"></i>костюмдар</a>
+      <a href="#about" id="about"><i class="fas fa-arrow-right"></i>шымдар</a>
+      <a href="#menu"><i class="fas fa-arrow-right"></i>галстуктар</a>
+      <a href="#review"><i class="fas fa-arrow-right"></i>бут кийимдер</a>
+      <a href="#contact"><i class="fas fa-arrow-right"></i>биз жөнүндө</a>
+      <a href="#blog"><i class="fas fa-arrow-right"></i>блог</a>
+    </div>
+    <div class="box">
+      <h3>quick links</h3>
+      <a href="#"><i class="fas fa-arrow-right"></i>my order</a>
+      <a href="#"><i class="fas fa-arrow-right"></i>my account</a>
+      <a href="#"><i class="fas fa-arrow-right"></i>my listining</a>
+      <a href="#"><i class="fas fa-arrow-right"></i>sell now</a>
+      <a href="#"><i class="fas fa-arrow-right"></i>new offers</a>
+    </div>
+    </div>
+    <div class="share">
+      <a href="#" class="fab fa-facebook-f"></a>
+      <a href="#" class="fab fa-pinterest"></a>
+      <a href="#" class="fab fa-linkedin"></a>
+      <a href="#" class="fab fa-instagram"></a>
+      <a href="#" class="fab fa-twitter"></a>
+    </div>
+    <div class="credit">
+     &copy;нурсадык @ тарабынын жасалган Mr.nursadyk
+    </div>
+  </section>
+  <!--footer section ends-->
+  <!--script start-->
+  <script>
+  let searchform = document.querySelector('.search-from');
+
+document.querySelector('#search-btn').onclick= () =>{
+  searchform.classList.toggle('active');
+  navbar.classList.remove('active');
+    cartitem.classList.remove('active');
+
+//darc mode//
+    function darkMode() { 
+var element = document.body; 
+element.classList.toggle("dark-mode"); 
+} 
+}
+</script>
+   <!--script ends-->
+</body>
+</html>
